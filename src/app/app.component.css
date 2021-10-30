@@ -1,0 +1,21 @@
+.buttons {
+  margin: 5px;
+  padding: 5px;
+  background-color: blue;
+}
+
+.margin {
+  margin: 10px;
+  position: relative;
+}
+
+.bottom {
+  bottom: 10px;
+  left: 30%;
+  right: 30%;
+  position: absolute;
+}
+
+.width {
+  width: 100%;
+}
