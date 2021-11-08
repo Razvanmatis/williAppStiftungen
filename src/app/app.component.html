@@ -8,21 +8,21 @@
 </a>
 <div class="width"></div>
   <div class="buttons" layout-align="end start">
-    <button class="fa fa-youtube fa-3x" (click)="openSnackbar('youtube')"></button>
+    <button matTooltip="Youtube öffnen" class="fa fa-youtube fa-3x" (click)="openSnackbar('youtube')"></button>
   </div>
   <div class="buttons" layout-align="end start">
-    <button class='fa fa-instagram fa-3x' (click)="openSnackbar('instagram')"></button>
+    <button matTooltip="Instagram öffnen" class='fa fa-instagram fa-3x' (click)="openSnackbar('instagram')"></button>
   </div>
   <div class="buttons" layout-align="end start">
-    <button class='fa fa-xing fa-3x' (click)="openSnackbar('xing')"></button>
+    <button matTooltip="Xing öffnen" class='fa fa-xing fa-3x' (click)="openSnackbar('xing')"></button>
   </div>
 </nav>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <router-outlet></router-outlet>
 <div class="bottom">
   <span (click)="openDialog('Impressum', textImpressum)" class="margin">Impressum</span>
-  <span (click)="openDialog('Datenschutz', 'Datenschutz text')" class="margin">Datenschutz</span>
-  <span (click)="openDialog('AGB', 'AGB text')" class="margin">Allgemeine Geschäftsbedingungen mit Kundeninformationen</span>
+  <span (click)="openDialog('Datenschutz', textDatenschutz)" class="margin">Datenschutz</span>
+  <span (click)="openDialog('AGB', textAgb)" class="margin">Allgemeine Geschäftsbedingungen mit Kundeninformationen</span>
 </div>
 
 

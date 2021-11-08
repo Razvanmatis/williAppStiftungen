@@ -12,7 +12,9 @@ import { DialogComponent } from './dialog/dialog.component';
 })
 export class AppComponent implements OnInit{
   title = 'app';
-  textImpressum = 'Fritz Stiftungsmethode StBG mbH, Herderstraße 42, 90427 Nürnberg';
+  textImpressum: Array<string> = GetTextImpressum();
+  textDatenschutz : Array<string> = GetDatenschutztext();
+  textAgb :Array<string> = GetAgbText();
   navLinks: any[];
   activeLinkIndex = -1;
 
@@ -42,7 +44,7 @@ export class AppComponent implements OnInit{
     this._snackBar.open(message + ' clicked', message, {duration: 3000});
   }
 
-  openDialog(name: string, text: string): void {
+  openDialog(name: string, text: string[]): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '650px',
       data: {text: text, name: name}
@@ -55,3 +57,20 @@ export class AppComponent implements OnInit{
     });
   }
 }
+
+function GetTextImpressum(): string[] {
+  const text = new Array<string>();
+  text.push('Fritz Stiftungsmethode StBG mbH');
+  text.push('Herderstraße 42');
+  text.push('90427 Nürnberg');
+  return text;
+}
+
+function GetDatenschutztext(): string[] {
+  return new Array<string>();
+}
+
+function GetAgbText(): string[] {
+  return new Array<string>();
+}
+

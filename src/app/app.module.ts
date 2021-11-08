@@ -52,6 +52,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
+import {SteckbriefComponent } from './steckbrief/steckbrief.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InlineSVGModule } from 'ng-inline-svg';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     KontaktformularComponent,
     StiftungenComponent,
     KarriereComponent,
-    DialogComponent
+    DialogComponent,
+    SteckbriefComponent
   ],
   imports: [
     BrowserModule,
@@ -110,6 +114,8 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    HttpClientModule,
+    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent]

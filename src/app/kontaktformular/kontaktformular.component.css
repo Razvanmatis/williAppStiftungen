@@ -1,0 +1,11 @@
+.bottom {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  background-color: beige;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+}
