@@ -53,8 +53,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {SteckbriefComponent } from './steckbrief/steckbrief.component';
-import { HttpClientModule } from '@angular/common/http';
-import { InlineSVGModule } from 'ng-inline-svg';
 
 @NgModule({
   declarations: [
@@ -114,8 +112,6 @@ import { InlineSVGModule } from 'ng-inline-svg';
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    HttpClientModule,
-    InlineSVGModule
   ],
   providers: [],
   bootstrap: [AppComponent]
