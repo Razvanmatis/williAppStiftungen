@@ -1,4 +1,26 @@
-.mat-icon {
-  font-size: 150px;
+.checked {
+  background-color: blue;
+  width: 60px;
+  margin: 10px;
 }
 
+.unchecked {
+  width: 60px;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.checkedText {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.uncheckedText {
+  font-weight: lighter;
+  font-size: 20px;
+  opacity: 0.5;
+}

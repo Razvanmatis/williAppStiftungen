@@ -7,20 +7,70 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SteckbriefComponent implements OnInit {
 
-  cars = [
-    {
-      id: '1',
-      name: 'Mazda MX-5 Miata',
-      img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-mazda-mx-5-miata-mmp-1-1593459650.jpg?crop=0.781xw:0.739xh;0.109xw,0.0968xh&resize=480:*',
-    },
-    {
-      id: '2',
-      name: 'Toyota Supra',
-      img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2020-chevrolet-corvette-c8-102-1571146873.jpg?crop=0.548xw:0.411xh;0.255xw,0.321xh&resize=980:*',
-    },
-  ];
+  checkedWoman = false;
+  checkedMan = false;
+  checkedDivers = false;
+  checked18to25 = false;
+  checked26to35 = false;
+  checked36to45 = false;
+  checked46to55 = false;
+  checked56to65 = false;
+  checked66to75 = false;
 
   ngOnInit(): void {
 
+  }
+
+  onAgeClick(_18to25: boolean, _26to35: boolean, _36to45:boolean, _46to55:boolean, _56to65: boolean, _66to75:boolean) {
+    if (_18to25) {
+      this.checked26to35 = false;
+      this.checked36to45 = false;
+      this.checked46to55 = false;
+      this.checked56to65 = false;
+      this.checked66to75 = false;
+    } else if (_26to35) {
+      this.checked18to25 = false;
+      this.checked36to45 = false;
+      this.checked46to55 = false;
+      this.checked56to65 = false;
+      this.checked66to75 = false;
+    } else if (_36to45) {
+      this.checked18to25 = false;
+      this.checked26to35 = false;
+      this.checked46to55 = false;
+      this.checked56to65 = false;
+      this.checked66to75 = false;
+    } else if (_46to55) {
+      this.checked18to25 = false;
+      this.checked26to35 = false;
+      this.checked36to45 = false;
+      this.checked56to65 = false;
+      this.checked66to75 = false;
+    } else if (_56to65) {
+      this.checked18to25 = false;
+      this.checked26to35 = false;
+      this.checked36to45 = false;
+      this.checked46to55 = false;
+      this.checked66to75 = false;
+    } else {
+      this.checked18to25 = false;
+      this.checked26to35 = false;
+      this.checked36to45 = false;
+      this.checked46to55 = false;
+      this.checked56to65 = false;
+    }
+  }
+
+  onSexClick(woman: boolean, man: boolean, divers: boolean) {
+    if (woman) {
+      this.checkedMan = false;
+      this.checkedDivers = false;
+    } else if (man) {
+      this.checkedWoman = false;
+      this.checkedDivers = false;
+    } else {
+      this.checkedMan = false;
+      this.checkedWoman = false;
+    }
   }
 }

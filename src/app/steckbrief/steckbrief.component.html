@@ -1,9 +1,127 @@
 <div class=row>
   <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
 </div>
-<mat-checkbox>
-  <mat-icon>account_box</mat-icon>
-</mat-checkbox>
+<div class="row">
+  <div class="col d-flex align-items-center">
+    <div class="margin">Welches Geschlecht hast du?</div>
+  </div>
+  <div class="col">
+    <mat-checkbox
+      [(ngModel)]="checkedWoman"
+      [labelPosition]="'before'"
+      (click)="onSexClick(true, false, false)">
+      <img [ngClass]="{
+        'checked':checkedWoman === true,
+        'unchecked':checkedWoman === false}"
+        src="https://upload.wikimedia.org/wikipedia/commons/4/47/Simpleicons_Interface_business-woman-1.svg">
+    </mat-checkbox>
+  </div>
+  <div class="col">
+    <mat-checkbox
+      [(ngModel)]="checkedMan"
+      [labelPosition]="'before'"
+      (click)="onSexClick(false, true, false)">
+      <img [ngClass]="{
+        'checked':checkedMan === true,
+        'unchecked':checkedMan === false}"
+        src="https://svgsilh.com/svg/2732627.svg">
+    </mat-checkbox>
+  </div>
+  <div class="col-sm">
+    <mat-checkbox
+      [(ngModel)]="checkedDivers"
+      [labelPosition]="'before'"
+      (click)="onSexClick(false, false, true)">
+      <img [ngClass]="{
+        'checked':checkedDivers === true,
+        'unchecked':checkedDivers === false}"
+        src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Male_and_female_sign.svg">
+    </mat-checkbox>
+  </div>
+  <div class="row">
+    <div class="col d-flex align-items-center">
+      <div class="margin">Wie alt bist du?</div>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked18to25"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(true, false, false, false, false, false)">
+        <div [ngClass]="{
+          'checkedText':checked18to25 === true,
+          'uncheckedText':checked18to25 === false}">
+          18 - 25
+        </div>
+      </mat-checkbox>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked26to35"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(false, true, false, false, false, false)">
+        <div [ngClass]="{
+          'checkedText':checked26to35 === true,
+          'uncheckedText':checked26to35 === false}">
+          26 - 35
+        </div>
+      </mat-checkbox>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked36to45"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(false, false, true, false, false, false)">
+        <div [ngClass]="{
+          'checkedText':checked36to45 === true,
+          'uncheckedText':checked36to45 === false}">
+          36 - 45
+        </div>
+      </mat-checkbox>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked46to55"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(false, false, false, true, false, false)">
+        <div [ngClass]="{
+          'checkedText':checked46to55 === true,
+          'uncheckedText':checked46to55 === false}">
+          46 - 55
+        </div>
+      </mat-checkbox>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col d-flex align-items-center">
+      <div class="margin">    </div>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked56to65"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(false, false, false, false, true, false)">
+        <div [ngClass]="{
+          'checkedText':checked56to65 === true,
+          'uncheckedText':checked56to65 === false}">
+          56 - 65
+        </div>
+      </mat-checkbox>
+    </div>
+    <div class="col">
+      <mat-checkbox
+        [(ngModel)]="checked66to75"
+        [labelPosition]="'before'"
+        (click)="onAgeClick(false, false, false, false, false, true)">
+        <div [ngClass]="{
+          'checkedText':checked66to75 === true,
+          'uncheckedText':checked66to75 === false}">
+          66 - 75
+        </div>
+      </mat-checkbox>
+    </div>
+  </div>
+</div>
+
 
 
 
